@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="16dp"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:background="@mipmap/field"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.google.ryan.walkstar.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/stepCounter"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:text=""
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/textView12" />
+
+    <ProgressBar
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="300dp"
+        android:layout_height="20dp"
+        android:id="@+id/progressBar"
+        android:indeterminate="false"
+        android:max="100"
+        android:minHeight="20dp"
+        android:maxHeight="20dp"
+        android:minWidth="20dp"
+        android:progress="1"
+        android:layout_marginBottom="70dp"
+        android:layout_above="@+id/imageView2"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="start progress "
+        android:id="@+id/button"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_width="350dp"
+        android:layout_height="360dp"
+        android:id="@+id/imageView2"
+        android:src="@mipmap/character"
+        android:layout_alignBottom="@+id/button"
+        android:layout_toEndOf="@+id/quizBtn" />
+
+    <ImageButton
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@null"
+        android:id="@+id/quizBtn"
+        android:src="@mipmap/gamebtn"
+        android:layout_below="@+id/game"
+        android:layout_alignEnd="@+id/shop" />
+
+    <ImageView
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:id="@+id/imageView3"
+        android:src="@mipmap/star"
+        android:layout_alignTop="@+id/wsAmount"
+        android:layout_alignEnd="@+id/button" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textColor="@color/yellow"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:id="@+id/wsAmount"
+        android:layout_alignTop="@+id/progressBar"
+        android:layout_toEndOf="@+id/imageView3"
+        android:layout_marginTop="26dp" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Notify"
+        android:id="@+id/notify"
+        android:onClick="Notification"
+        android:layout_alignBottom="@+id/imageView2"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Walkstars"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="@color/yellow"
+        android:id="@+id/textView12"
+        android:layout_alignTop="@+id/imageView3"
+        android:layout_toStartOf="@+id/imageView3" />
+
+    <ImageButton
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/game"
+        android:background="@null"
+        android:src="@mipmap/gicon"
+        android:layout_below="@+id/imageView3"
+        android:layout_toStartOf="@+id/imageView2" />
+
+    <ImageButton
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/shop"
+        android:src="@mipmap/shop"
+        android:background="@null"
+        android:layout_below="@+id/quizBtn"
+        android:layout_marginTop="15dp"
+        android:layout_alignEnd="@+id/notify" />
+
+</RelativeLayout>

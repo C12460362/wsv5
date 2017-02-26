@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    android:background="@color/bblue"
+    tools:context="com.google.ryan.walkstar.ChallengeActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="WalkStars"
+        android:textSize="70sp"
+        android:fontFamily="WalkStars"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:id="@+id/wsLogo"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="A Step In The Right Direction"
+        android:textStyle="italic"
+        android:textColor="@color/white"
+        android:id="@+id/textView11"
+        android:layout_alignBottom="@+id/wsLogo"
+        android:layout_centerHorizontal="true" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/round"
+        android:id="@+id/relativeLayout2">
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/selectChallenge"
+            android:hint="Select Challenge"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true" />
+        </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/chall"
+        android:layout_marginTop="40dp"
+        android:layout_below="@id/relativeLayout2"
+        android:id="@+id/relativeLayout4">
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Challenge Detail"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:id="@+id/challengeDetail"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/chall"
+            android:id="@+id/relativeLayout5"
+            android:layout_marginBottom="10dp"
+            android:layout_above="@+id/database"
+            android:layout_centerHorizontal="true">
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/seekBar"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+
+        <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/seekBar2"
+        android:layout_below="@+id/StepAmount"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="47dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:id="@+id/StepAmount"
+        android:layout_below="@+id/seekBar"
+        android:layout_toEndOf="@+id/stepCounter" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="New Text"
+        android:textColor="@color/white"
+        android:id="@+id/dayAmount"
+        android:layout_alignTop="@+id/day"
+        android:layout_toRightOf="@+id/day" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="Step Amount: "
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:id="@+id/stepCounter"
+            android:layout_below="@+id/seekBar"
+            android:gravity="left"
+            android:layout_marginLeft="20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="Day Amount: "
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:id="@+id/day"
+            android:layout_below="@+id/seekBar2"
+            android:layout_marginLeft="20dp"
+            android:gravity="left"/>
+
+    </RelativeLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="View Challenge"
+        android:id="@+id/database"
+        android:layout_alignTop="@+id/createChallenge"
+        android:layout_alignParentEnd="true" />
+
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delete Challenge"
+        android:id="@+id/delete"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/database" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Update Challenge"
+        android:id="@+id/update"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/relativeLayout5" />
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create Challenge"
+        android:id="@+id/createChallenge"
+        android:layout_above="@+id/delete"
+        android:layout_alignStart="@+id/update" />
+
+
+</RelativeLayout>
